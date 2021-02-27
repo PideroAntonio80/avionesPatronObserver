@@ -1,22 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane fx:id="air" prefHeight="670.0" prefWidth="842.0">
          <children>
-            <Polygon fx:id="azul" fill="DODGERBLUE" layoutX="233.0" layoutY="450.0" points="36.999969482421875, -35.364593505859375, -2.3333282470703125, -53.666656494140625, -34.33332824707031, -35.364593505859375" stroke="BLACK" strokeType="INSIDE" />
-            <Polygon fx:id="rojo" fill="#ff1f1f" layoutX="233.0" layoutY="530.0" points="0.9999847412109375, -52.666656494140625, 69.66665649414062, -25.000030517578125, -64.33332824707031, -25.000030517578125" stroke="BLACK" strokeType="INSIDE" />
-            <Button layoutX="94.0" layoutY="10.0" mnemonicParsing="false" onAction="#up" text="UP" />
-            <Button layoutX="93.0" layoutY="84.0" mnemonicParsing="false" onAction="#down" text="DOWN" />
-            <Button layoutX="29.0" layoutY="46.0" mnemonicParsing="false" onAction="#left" text="LEFT" />
-            <Button layoutX="157.0" layoutY="46.0" mnemonicParsing="false" onAction="#right" text="RIGHT" />
-            <Button layoutX="243.0" layoutY="14.0" mnemonicParsing="false" onAction="#fast" text="FAST" />
-            <Button layoutX="243.0" layoutY="68.0" mnemonicParsing="false" onAction="#slow" text="SLOW" />
+            <Polygon fx:id="azul" fill="DODGERBLUE" layoutX="400.0" layoutY="500.0" points="36.999969482421875, -35.364593505859375, -2.3333282470703125, -53.666656494140625, -34.33332824707031, -35.364593505859375" stroke="BLACK" strokeType="INSIDE" />
+            <Polygon fx:id="rojo" fill="#ff1f1f" layoutX="400.0" layoutY="580.0" points="0.9999847412109375, -52.666656494140625, 69.66665649414062, -25.000030517578125, -64.33332824707031, -25.000030517578125" stroke="BLACK" strokeType="INSIDE" />
+            <Button layoutX="103.0" layoutY="14.0" mnemonicParsing="false" onAction="#up" prefHeight="32.0" prefWidth="65.0" text="UP" />
+            <Button layoutX="103.0" layoutY="110.0" mnemonicParsing="false" onAction="#down" prefHeight="32.0" prefWidth="65.0" text="DOWN" />
+            <Button layoutX="20.0" layoutY="62.0" mnemonicParsing="false" onAction="#left" prefHeight="32.0" prefWidth="65.0" text="LEFT" />
+            <Button layoutX="185.0" layoutY="62.0" mnemonicParsing="false" onAction="#right" prefHeight="32.0" prefWidth="65.0" text="RIGHT" />
+            <Button layoutX="328.0" layoutY="14.0" mnemonicParsing="false" onAction="#fast" prefHeight="32.0" prefWidth="57.0" text="FAST" />
+            <Button layoutX="328.0" layoutY="62.0" mnemonicParsing="false" onAction="#slow" prefHeight="32.0" prefWidth="57.0" text="SLOW" />
+            <Button layoutX="679.0" layoutY="14.0" mnemonicParsing="false" onAction="#start" text="START" />
+            <Button fx:id="bPause" layoutX="93.0" layoutY="62.0" mnemonicParsing="false" onAction="#pause" prefHeight="32.0" prefWidth="85.0" text="PAUSE" />
+            <Button fx:id="bKill" layoutX="679.0" layoutY="62.0" mnemonicParsing="false" onAction="#kill" prefHeight="32.0" prefWidth="134.0" style="-fx-background-color: red;" text="KILL PREDATOR" textFill="#1b0101" />
+            <Button layoutX="755.0" layoutY="14.0" mnemonicParsing="false" onAction="#stop" text="STOP" />
+            <Label layoutX="401.0" layoutY="38.0" text="SPEED" />
+            <TextField fx:id="tfSpeed" layoutX="452.0" layoutY="33.0" prefHeight="26.0" prefWidth="91.0" />
+            <Line endX="844.0" endY="155.0" startY="155.0" />
+            <Label fx:id="lGameOver" layoutX="285.0" layoutY="109.0" prefHeight="41.0" prefWidth="322.0" textFill="#9e1717">
+               <font>
+                  <Font name="Terminator Two" size="43.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

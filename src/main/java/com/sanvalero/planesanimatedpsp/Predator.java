@@ -1,7 +1,5 @@
 package com.sanvalero.planesanimatedpsp;
 
-import javafx.scene.shape.Polygon;
-
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
@@ -15,10 +13,8 @@ public class Predator implements PropertyChangeListener {
     private double speed;
     private double degrees;
     private String direction;
-    private Polygon figura;
 
-    public Predator(Polygon figura) {
-        this.figura = figura;
+    public Predator() {
     }
 
     public double getHeight() {
@@ -76,6 +72,5 @@ public class Predator implements PropertyChangeListener {
                 System.out.println("Keep Going");
                 break;
         }
-
     }
 }
